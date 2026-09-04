@@ -31,3 +31,4 @@
 :root{--mist:#f8f5f1;--line:#ebe5dc}
 .header,.mobile-menu nav{background:#f8f5f1;border-color:#eee8df}
 .soft-card,.project-card,.note,.news-grid article,.work-grid a,.partnership-note{background:#fbf8f4}
+.project-card{background:#fff;border:1px solid #eee8df;box-shadow:0 10px 32px rgba(32,37,95,.045)}
