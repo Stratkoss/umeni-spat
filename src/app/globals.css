@@ -23,3 +23,6 @@
 
 .socials a[aria-label="Instagram"]{color:#dd8ecb}
 .socials a[aria-label="Facebook"]{color:#4267b2;font-family:Arial,sans-serif;font-weight:700}
+
+.hero{background-color:var(--navy);background-image:linear-gradient(100deg,rgba(32,37,95,.94) 0%,rgba(32,37,95,.9) 52%,rgba(32,37,95,.82) 100%),url("/images/hero-sleep.jpg");background-position:center 58%;background-size:cover;background-repeat:no-repeat}
+@media(max-width:700px){.hero{background-image:linear-gradient(rgba(32,37,95,.91),rgba(32,37,95,.94)),url("/images/hero-sleep.jpg");background-position:67% center}}
