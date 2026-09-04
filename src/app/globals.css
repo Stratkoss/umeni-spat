@@ -17,3 +17,6 @@
 
 /* Individual portrait framing */
 .scientist-photo-2{object-position:50% 20%!important}
+
+@media(max-width:700px){.support{padding:22px}.support img{width:96px;height:96px}}
+@media(max-width:380px){.support{gap:12px}.support strong{font-size:18px}.support img{width:82px;height:82px}}
