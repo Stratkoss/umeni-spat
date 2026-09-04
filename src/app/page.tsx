@@ -43,7 +43,7 @@ export default function Home() {
           <a href="#o-nas">O nás</a><a href="#projekty">Projekty</a><a href="#veda">Spánek a věda</a>
           <a href="#pro-firmy">Firmy a instituce</a><a href="#aktuality">Aktuality</a><a href="#kontakt">Kontakt</a>
         </nav>
-        <div className="socials"><a href="https://linkedin.com/company/112782902/" aria-label="LinkedIn">in</a><a href="https://instagram.com/umenispatnf/" aria-label="Instagram">◎</a></div>
+        <div className="socials"><a href="https://linkedin.com/company/112782902/" aria-label="LinkedIn">in</a><a href="https://instagram.com/umenispatnf/" aria-label="Instagram">◎</a><a href="https://www.facebook.com/profile.php?id=61588727978587" aria-label="Facebook">f</a></div>
         <details className="mobile-menu"><summary aria-label="Otevřít menu"><span></span><span></span><span></span></summary><nav><a href="#o-nas">O nás</a><a href="#projekty">Projekty</a><a href="#veda">Spánek a věda</a><a href="#pro-firmy">Firmy a instituce</a><a href="#aktuality">Aktuality</a><a href="#kontakt">Kontakt</a></nav></details>
       </header>
 
@@ -92,7 +92,7 @@ export default function Home() {
 
       <section id="kontakt" className="section white contact"><div className="container"><div className="contact-intro"><h2>Spojme se!</h2><p>Máte zájem o odbornou spolupráci, partnerství nebo podporu některého z našich projektů? Napište nám.</p></div><div className="contact-grid"><div><h3>Mgr. et Mgr. Alice Pospíšilová</h3><p>Zakladatelka a předsedkyně správní rady</p><a href="mailto:alice@umenispatnf.cz">alice@umenispatnf.cz</a><a href="tel:+420603838333">+420 603 838 333</a><address>Nadační fond Umění spát<br/>Na Příkopě 17/1047<br/>110 00 Praha 1</address></div><div className="support"><div><Eyebrow>Podpořte naši práci</Eyebrow><p>Transparentní účet</p><strong>207966005/5500</strong></div><Image src="/images/qr.jpeg" alt="QR kód transparentního účtu" width={175} height={175}/></div></div></div></section>
 
-      <footer className="footer navy"><div className="container"><strong>NADAČNÍ FOND UMĚNÍ SPÁT</strong><p><a href="mailto:alice@umenispatnf.cz">alice@umenispatnf.cz</a> · Praha, Česká republika</p><p>© 2026 Umění spát, nadační fond · <a href="https://linkedin.com/company/112782902/">LinkedIn</a> · <a href="https://instagram.com/umenispatnf/">Instagram</a></p><small>Veškerý obsah tohoto webu je majetkem Umění spát, nadačního fondu. Bez písemného souhlasu nesmí být použit ani šířen, a to ani v pozměněné podobě.</small></div></footer>
+      <footer className="footer navy"><div className="container"><strong>NADAČNÍ FOND UMĚNÍ SPÁT</strong><p><a href="mailto:alice@umenispatnf.cz">alice@umenispatnf.cz</a> · Praha, Česká republika</p><p>© 2026 Umění spát, nadační fond · <a href="https://linkedin.com/company/112782902/">LinkedIn</a> · <a href="https://instagram.com/umenispatnf/">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61588727978587">Facebook</a></p><small>Veškerý obsah tohoto webu je majetkem Umění spát, nadačního fondu. Bez písemného souhlasu nesmí být použit ani šířen, a to ani v pozměněné podobě.</small></div></footer>
     </main>
   );
 }

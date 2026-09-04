@@ -17,13 +17,13 @@ function Header() {
   return <header className="header">
     <Link href="/" className="logo" aria-label="Umění spát – domů"><Image src="/images/logo.png" alt="Nadační fond Umění spát" width={260} height={93} priority /></Link>
     <nav className="desktop-nav" aria-label="Hlavní navigace"><Link href="/#o-nas">O nás</Link><Link href="/#projekty">Projekty</Link><Link href="/#veda">Spánek a věda</Link><Link href="/#pro-firmy">Firmy a instituce</Link><Link href="/#aktuality">Aktuality</Link><Link href="/#kontakt">Kontakt</Link></nav>
-    <div className="socials"><a href="https://linkedin.com/company/112782902/" aria-label="LinkedIn">in</a><a href="https://instagram.com/umenispatnf/" aria-label="Instagram">◎</a></div>
+    <div className="socials"><a href="https://linkedin.com/company/112782902/" aria-label="LinkedIn">in</a><a href="https://instagram.com/umenispatnf/" aria-label="Instagram">◎</a><a href="https://www.facebook.com/profile.php?id=61588727978587" aria-label="Facebook">f</a></div>
     <details className="mobile-menu"><summary aria-label="Otevřít menu"><span></span><span></span><span></span></summary><nav><Link href="/#o-nas">O nás</Link><Link href="/#projekty">Projekty</Link><Link href="/#veda">Spánek a věda</Link><Link href="/#pro-firmy">Firmy a instituce</Link><Link href="/#aktuality">Aktuality</Link><Link href="/#kontakt">Kontakt</Link></nav></details>
   </header>;
 }
 
 function Footer() {
-  return <footer className="footer navy"><div className="container"><strong>NADAČNÍ FOND UMĚNÍ SPÁT</strong><p><a href="mailto:alice@umenispatnf.cz">alice@umenispatnf.cz</a> · Praha, Česká republika</p><p>© 2026 Umění spát, nadační fond · <a href="https://linkedin.com/company/112782902/">LinkedIn</a> · <a href="https://instagram.com/umenispatnf/">Instagram</a></p><small>Veškerý obsah tohoto webu je majetkem Umění spát, nadačního fondu. Bez písemného souhlasu nesmí být použit ani šířen, a to ani v pozměněné podobě.</small></div></footer>;
+  return <footer className="footer navy"><div className="container"><strong>NADAČNÍ FOND UMĚNÍ SPÁT</strong><p><a href="mailto:alice@umenispatnf.cz">alice@umenispatnf.cz</a> · Praha, Česká republika</p><p>© 2026 Umění spát, nadační fond · <a href="https://linkedin.com/company/112782902/">LinkedIn</a> · <a href="https://instagram.com/umenispatnf/">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61588727978587">Facebook</a></p><small>Veškerý obsah tohoto webu je majetkem Umění spát, nadačního fondu. Bez písemného souhlasu nesmí být použit ani šířen, a to ani v pozměněné podobě.</small></div></footer>;
 }
 
 export default function PartnershipPage() {
