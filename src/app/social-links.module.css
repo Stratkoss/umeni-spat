@@ -1,0 +1,8 @@
+.socials { display: flex; flex-shrink: 0; gap: 2px; margin-left: auto; }
+.socials a { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; color: var(--navy); }
+.socials svg { width: 19px; height: 19px; }
+.socials a:hover { background: #ede4ee; }
+.socials a:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
+@media (max-width: 380px) { .socials { gap: 0; } }
+@media (max-width: 700px) { :global(.header) > .socials { display: none; } }
+:global(.mobile-menu) .socials { margin-left: 0; }

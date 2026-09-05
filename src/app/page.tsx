@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Footer from "./footer";
+import SocialLinks from "./social-links";
+import SleepArt from "./sleep-art";
 
 const pillars = [
   ["01", "Zdraví", "Regenerace, imunita a dlouhodobá odolnost začínají v noci."],
@@ -9,7 +12,7 @@ const pillars = [
 const projects = [
   ["01 / VZDĚLÁVÁNÍ", "Spánek pro školy", "Praktické know-how pro mladé lidi, pedagogy i rodiče."],
   ["02 / PREVENCE", "Klidnější města", "Veřejná debata o odpočinku, světle a zdravém rytmu."],
-  ["03 / BEZPEČNOST", "Odpočatí v práci", "Programy pro obory, kde dobré rozhodnutí chrání životy."],
+  ["03 / BEZPEČNOST", "Bdělost, která chrání", "Programy pro obory, kde dobré rozhodnutí chrání životy."],
 ];
 
 const scientists = [
@@ -30,8 +33,6 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
   return <p className="eyebrow">{children}</p>;
 }
 
-function Arrow() { return <span aria-hidden="true">↗</span>; }
-
 export default function Home() {
   return (
     <main>
@@ -43,15 +44,16 @@ export default function Home() {
           <a href="#o-nas">O nás</a><a href="#projekty">Projekty</a><a href="#veda">Spánek a věda</a>
           <a href="#pro-firmy">Firmy a instituce</a><a href="#aktuality">Aktuality</a><a href="#kontakt">Kontakt</a>
         </nav>
-        <div className="socials"><a href="https://linkedin.com/company/112782902/" aria-label="LinkedIn">in</a><a href="https://instagram.com/umenispatnf/" aria-label="Instagram">◎</a><a href="https://www.facebook.com/profile.php?id=61588727978587" aria-label="Facebook">f</a></div>
-        <details className="mobile-menu"><summary aria-label="Otevřít menu"><span></span><span></span><span></span></summary><nav><a href="#o-nas">O nás</a><a href="#projekty">Projekty</a><a href="#veda">Spánek a věda</a><a href="#pro-firmy">Firmy a instituce</a><a href="#aktuality">Aktuality</a><a href="#kontakt">Kontakt</a></nav></details>
+        <SocialLinks />
+        <details className="mobile-menu"><summary aria-label="Otevřít menu"><span></span><span></span><span></span></summary><nav><a href="#o-nas">O nás</a><a href="#projekty">Projekty</a><a href="#veda">Spánek a věda</a><a href="#pro-firmy">Firmy a instituce</a><a href="#aktuality">Aktuality</a><a href="#kontakt">Kontakt</a><SocialLinks /></nav></details>
       </header>
 
       <section id="top" className="hero navy">
         <div className="container hero-inner">
           <Eyebrow>NADAČNÍ FOND UMĚNÍ SPÁT</Eyebrow>
           <h1>Spánek mění život.</h1>
-          <div className="actions"><a className="button pink" href="#projekty">Poznejte naše projekty</a><a className="button light" href="/partnerstvi">Staňte se partnerem</a></div>
+          <p className="hero-lead">Propojujeme vědu, vzdělávání a praxi, aby se kvalitní spánek stal přirozenou součástí života.</p>
+          <div className="actions"><a className="button pink" href="/partnerstvi">Staňte se partnerem</a><a className="button outline" href="#aktuality">Aktuality</a></div>
         </div>
       </section>
 
@@ -63,7 +65,7 @@ export default function Home() {
 
       <section id="projekty" className="section mist">
         <div className="container"><Eyebrow>02 — NAŠE PROJEKTY</Eyebrow><h2>Měníme vztah ke spánku tam, kde na něm nejvíc záleží.</h2>
-          <div className="project-grid">{projects.map(([n,t,d])=><article className="project-card" key={n}><Eyebrow>{n}</Eyebrow><div><h3>{t}</h3><p>{d}</p></div><Arrow /></article>)}</div>
+          <div className="project-grid">{projects.map(([n,t,d])=><article className="project-card" key={n}><Eyebrow>{n}</Eyebrow><div><h3>{t}</h3><p>{d}</p></div></article>)}</div>
         </div>
       </section>
 
@@ -75,7 +77,7 @@ export default function Home() {
 
       <section className="section navy impact"><div className="container"><Eyebrow>04 — SPÁNEK, VÝKON A BEZPEČNOST</Eyebrow><h2>Odpočatí lidé dělají bezpečnější rozhodnutí.</h2><div className="impact-list"><p>Ve směnném provozu je spánek bezpečnostní faktor.</p><p>Ve vedení týmů je spánek základ dobrého úsudku.</p><p>V každodenním životě je spánek zdroj energie i pozornosti.</p></div></div></section>
 
-      <section id="pro-firmy" className="section white"><div className="container split"><div><Eyebrow>05 — PRO FIRMY A INSTITUCE</Eyebrow><h2>Dobrý spánek je chytrá investice do lidí.</h2><p className="lead">Pomáháme organizacím otevřít téma spánku s respektem, daty a konkrétním dopadem.</p><a className="button pink" href="/partnerstvi">Zjistit možnosti spolupráce</a></div><aside className="note"><h3>Spánek je firemní kultura.</h3><p>Začít lze malým krokem. Měřit lze velkou změnu.</p></aside></div></section>
+      <section id="pro-firmy" className="section white"><div className="container split"><div><Eyebrow>05 — PRO FIRMY A INSTITUCE</Eyebrow><h2>Dobrý spánek je chytrá investice do lidí.</h2><p className="lead">Pomáháme organizacím otevřít téma spánku s respektem, daty<br className="desktop-break" />{" "}a konkrétním dopadem.</p><a className="button pink" href="/partnerstvi">Zjistit možnosti spolupráce</a></div><aside className="note"><h3>Spánek je firemní kultura.</h3><p>Začít lze malým krokem.<br className="desktop-break" />{" "}Měřit lze velkou změnu.</p></aside></div></section>
 
       <section className="partners mist"><div className="container"><Eyebrow>PARTNEŘI A ODBORNÁ KOMUNITA</Eyebrow><div className="partner-logos">{[1,2,3,4,5].map(n=><Image key={n} src={`/images/partner-${n}.png`} alt="Partnerská organizace" width={170} height={100}/>)}</div></div></section>
 
@@ -85,14 +87,14 @@ export default function Home() {
       </div></section>
 
       <section id="aktuality" className="section mist"><div className="container"><Eyebrow>07 — AKTUALITY</Eyebrow><h2>Co právě připravujeme.</h2><div className="news-grid">{news.map(([d,t],i)=><article key={d}><Image src={`/images/news-${i+1}.jpeg`} alt="" width={500} height={600}/><Eyebrow>{d}</Eyebrow><h3>{t}</h3></article>)}</div>
-        <h2 className="work-title">Z naší práce.</h2><div className="work-grid"><a href="https://online.fliphtml5.com/eizkm/Renomag26_online_v2/#p=37"><Image src="/images/work-1.jpg" alt="Mikrospánek" width={700} height={400}/><Eyebrow>ČLÁNEK · RENOCAR</Eyebrow><h3>Mikrospánek: několik sekund, které mohou rozhodnout.</h3></a><a href="https://o2chytraskola.cz/novinka/mozek-vs-displej-telefonu-vecerni-souboj-ktery-zname-vsichni-jak-ho-vyhrat"><Image src="/images/work-2.png" alt="Mozek vs. displej telefonu" width={700} height={400}/><Eyebrow>ČLÁNEK · NADACE O2</Eyebrow><h3>Mozek vs. displej telefonu: večerní souboj, který známe všichni. Jak ho vyhrát?</h3></a></div>
+        <h2 className="work-title">Z naší práce.</h2><div className="work-grid"><a href="https://online.fliphtml5.com/eizkm/Renomag26_online_v2/#p=37"><Image className="article-preview" src="/images/work-1.jpg" alt="Mikrospánek" width={700} height={400}/><Eyebrow>ČLÁNEK · RENOCAR</Eyebrow><h3>Mikrospánek: několik sekund, které mohou rozhodnout.</h3></a><a href="https://o2chytraskola.cz/novinka/mozek-vs-displej-telefonu-vecerni-souboj-ktery-zname-vsichni-jak-ho-vyhrat"><Image src="/images/work-2.png" alt="Mozek vs. displej telefonu" width={700} height={400}/><Eyebrow>ČLÁNEK · NADACE O2</Eyebrow><h3>Mozek vs. displej telefonu: večerní souboj, který známe všichni. Jak ho vyhrát?</h3></a></div>
       </div></section>
 
-      <section className="cta navy"><div className="container"><Eyebrow>PARTNERSTVÍ PRO LEPŠÍ NOCI</Eyebrow><h2>Pojďme dát spánku váhu, kterou si zaslouží.</h2><p>Nabízíme strategické partnerství, podporu konkrétních projektů i odbornou a technologickou spolupráci.</p><a className="button pink" href="/partnerstvi">Navázat spolupráci</a></div></section>
+      <section className="cta navy"><SleepArt className="cta-art" /><div className="container"><Eyebrow>PARTNERSTVÍ PRO LEPŠÍ NOCI</Eyebrow><h2>Pojďme dát spánku váhu, kterou si zaslouží.</h2><p>Nabízíme strategické partnerství, podporu konkrétních projektů i odbornou a technologickou spolupráci.</p><a className="button pink" href="/partnerstvi">Navázat spolupráci</a></div></section>
 
-      <section id="kontakt" className="section white contact"><div className="container"><div className="contact-intro"><h2>Spojme se!</h2><p>Máte zájem o odbornou spolupráci, partnerství nebo podporu některého z našich projektů? Napište nám.</p></div><div className="contact-grid"><div><h3>Mgr. et Mgr. Alice Pospíšilová</h3><p>Zakladatelka a předsedkyně správní rady</p><a href="mailto:alice@umenispatnf.cz">alice@umenispatnf.cz</a><a href="tel:+420603838333">+420 603 838 333</a><address>Nadační fond Umění spát<br/>Na Příkopě 17/1047<br/>110 00 Praha 1</address></div><div className="support"><div><Eyebrow>Podpořte naši práci</Eyebrow><p>Transparentní účet</p><strong>207966005/5500</strong></div><Image src="/images/qr.jpeg" alt="QR kód transparentního účtu" width={175} height={175}/></div></div></div></section>
+      <section id="kontakt" className="section white contact"><div className="container"><div className="contact-intro"><h2>Spojme se!</h2><p>Máte zájem o odbornou spolupráci, partnerství nebo podporu některého z našich projektů? Napište nám.</p></div><div className="contact-grid"><div><h3>Mgr. et Mgr. Alice Pospíšilová</h3><p>Zakladatelka a předsedkyně správní rady</p><a href="mailto:alice@umenispatnf.cz">alice@umenispatnf.cz</a><a href="tel:+420603838333">+420 603 838 333</a><address>Nadační fond Umění spát<br/>Na Příkopě 17/1047<br/>110 00 Praha 1</address></div><div className="support"><Eyebrow>Podpořte naši práci</Eyebrow><div className="payment-details"><div className="payment-bank"><p className="payment-label">Číslo účtu</p><strong className="payment-account">207966005/5500</strong></div><p className="payment-message"><span>Zpráva pro příjemce</span>Nadační fond Umění spát.</p></div><div className="payment-qr"><Image src="/images/qr-payment.png" alt="QR kód pro platbu na účet Nadačního fondu Umění spát" width={255} height={255}/><small>QR kód skenujte přímo v aplikaci mobilního bankovnictví.</small></div></div></div></div></section>
 
-      <footer className="footer navy"><div className="container"><strong>NADAČNÍ FOND UMĚNÍ SPÁT</strong><p><a href="mailto:alice@umenispatnf.cz">alice@umenispatnf.cz</a> · Praha, Česká republika</p><p>© 2026 Umění spát, nadační fond · <a href="https://linkedin.com/company/112782902/">LinkedIn</a> · <a href="https://instagram.com/umenispatnf/">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61588727978587">Facebook</a></p><small>Veškerý obsah tohoto webu je majetkem Umění spát, nadačního fondu. Bez písemného souhlasu nesmí být použit ani šířen, a to ani v pozměněné podobě.</small></div></footer>
+      <Footer />
     </main>
   );
 }
