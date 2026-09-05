@@ -46,7 +46,7 @@
 @media(min-width:981px){.founder blockquote{width:calc(100% + 72px);font-size:clamp(16px,1.25vw,18px);line-height:1.35;letter-spacing:-.035em;white-space:nowrap}}
 
 /* Final typography and interaction polish */
-.button.pink{color:var(--navy)}
+.button.pink{color:#fff}
 .button.pink:hover{background:#f0a2e1}
 .button.outline{color:#fff;border:1px solid rgba(255,255,255,.5)}
 .button.outline:hover{background:rgba(255,255,255,.09)}
