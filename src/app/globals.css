@@ -115,6 +115,9 @@ a:focus-visible,summary:focus-visible{outline:2px solid currentColor;outline-off
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
+/* The narrow SBCR mark needs a little more height to match the visual weight of its neighbours. */
+.partner-logos .partner-logo-sbcr{width:auto;height:100px;max-height:none}
+
 /* Donation card: one clear title, a readable account and a centered mobile QR. */
 .support>.eyebrow{grid-column:1/-1;margin:0}
 .payment-details{min-width:0}
