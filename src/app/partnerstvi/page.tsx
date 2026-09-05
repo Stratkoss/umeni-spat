@@ -28,7 +28,7 @@ export default function PartnershipPage() {
   return <main>
     <Header />
     <section className="partnership-hero white"><div className="container partnership-hero-grid">
-      <div><p className="eyebrow">05 — PARTNERSTVÍ</p><h1>Společně můžeme změnit, jak společnost přemýšlí o spánku.</h1><p className="partnership-lead">Propojujeme firmy, odborníky a instituce, které chtějí podpořit zdravější, bezpečnější a výkonnější společnost.</p><a className="button pink" href="mailto:alice@umenispatnf.cz">Domluvit partnerství</a></div>
+      <div><p className="eyebrow">05 — PARTNERSTVÍ</p><h1>Společně můžeme změnit, jak společnost přemýšlí<br className="desktop-break" />{" "}o spánku.</h1><p className="partnership-lead">Propojujeme firmy, odborníky a instituce, které chtějí podpořit zdravější, bezpečnější a výkonnější společnost.</p><a className="button pink" href="mailto:alice@umenispatnf.cz">Domluvit partnerství</a></div>
       <aside className="partnership-note"><h2>Partnerství, které má smysl.</h2><p>Stavíme je na důvěře, společných hodnotách a konkrétním dopadu.</p></aside>
     </div></section>
     <section className="partnership-options mist"><div className="container">
